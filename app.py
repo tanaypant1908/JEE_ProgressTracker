@@ -106,7 +106,7 @@ with tab3:
 with tab4:
         st.header("🤖IMPORTANT")
     if len(data[data['name'] == name]) > 0:
-        today = data[data['name'] == name].iloc[-1]
+       
         total_study = today['phy_study'] + today['chem_study'] + today['math_study'] + today['revision']
         
         if total_study < 6 and today['health'] > 6:
