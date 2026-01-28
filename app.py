@@ -41,7 +41,7 @@ st.sidebar.title("👨‍🎓 Your Profile")
 name = st.sidebar.text_input("Name", "")
 
 # 4-TAB SIMPLIFIED DASHBOARD (No errors!)
-tab1, tab2, tab3, tab4 = st.tabs(["📝 Log Today", "📊 Progress", "🔥 Heatmaps", "🤖 PRO TIPS"])
+tab1, tab2, tab3, tab4 = st.tabs(["📝 Log Today", "📊 Progress", "🔥 Heatmaps", "🤖IMPORTANT"])
 
 with tab1:
     st.header("🎯 Quick Daily Log")
@@ -104,7 +104,7 @@ with tab3:
     st.plotly_chart(fig2, use_container_width=True)
 
 with tab4:
-    st.header("🤖PRO TIPS")
+        st.header("IMPORTANT")
     if len(data[data['name'] == name]) > 0:
         today = data[data['name'] == name].iloc[-1]
         total_study = today['phy_study'] + today['chem_study'] + today['math_study'] + today['revision']
@@ -116,7 +116,6 @@ with tab4:
             This is your chance to change your life and your parents life. Mate, pain of discipline is always better than pain of regret. Just imagine your yourself in
             your dream institution. Hardwork always beats talent when talent does not work hard. You are not average or bad at studies, you just need to lock in. Let's do it.
             Lets track your progress and study smart.**
-            
             **🔬 Scientifically Proven Technique For Revison:**
             **Blank paper technique**: Take a blank page and and just try to write everything you have studied(active recall)roughly.If you forget,see your material and mark it.
             """)
