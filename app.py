@@ -125,7 +125,7 @@ with tab4:
             3. **Active Recall**: Flashcards > re-reading
           
             """)
-        elif today['social_media'] > 0.75:
+        if today['social_media'] > 0.75:
             st.warning("📱 Social Media > 45min!")
             st.info("""
             **🧠 Proven Fixes:**
