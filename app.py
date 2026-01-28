@@ -136,7 +136,7 @@ with tab4:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666;'>
-    <h3>👨‍💻 Tanay Pant | ISC Class 11 AI |</h3>
-    <p>🚀 JEE Tracker Pro | 250+ Lucknow Students | Live Analytics + AI Coach</p>
+    <h3>👨‍💻Tanay Pant</h3>
+    <p>🚀 JEE Tracker Pro | Live Analytics + AI Coach</p>
 </div>
 """, unsafe_allow_html=True)
