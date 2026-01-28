@@ -38,7 +38,7 @@ data = st.session_state.data
 
 # Sidebar
 st.sidebar.title("👨‍🎓 Your Profile")
-name = st.sidebar.text_input("Name", "")
+name = st.sidebar.text_input("Future IITian Name", "")
 
 # 4-TAB SIMPLIFIED DASHBOARD (No errors!)
 tab1, tab2, tab3, tab4 = st.tabs(["📝 Log Today", "📊 Progress", "🔥 Heatmaps", "🤖IMPORTANT"])
@@ -46,9 +46,9 @@ tab1, tab2, tab3, tab4 = st.tabs(["📝 Log Today", "📊 Progress", "🔥 Heatm
 with tab1:
     st.header("🎯 Quick Daily Log")
     col1, col2, col3 = st.columns(3)
-    with col1: phy_q, phy_h = st.number_input("Physics Qs", 0, 200, 50), st.number_input("Physics (self-study hrs)", 0.0, 6.0, 2.0)
-    with col2: chem_q, chem_h = st.number_input("Chemistry Qs", 0, 200, 45), st.number_input("Chemistry (hrs)", 0.0, 6.0, 2.0)
-    with col3: math_q, math_h = st.number_input("Math Qs", 0, 200, 40), st.number_input("Math (hrs)", 0.0, 6.0, 2.0)
+    with col1: phy_q, phy_h = st.number_input("Physics Qs", 0, 200, 50), st.number_input("Physics (h)", 0.0, 6.0, 2.0)
+    with col2: chem_q, chem_h = st.number_input("Chemistry Qs", 0, 200, 45), st.number_input("Chemistry (h)", 0.0, 6.0, 2.0)
+    with col3: math_q, math_h = st.number_input("Math Qs", 0, 200, 40), st.number_input("Math (h)", 0.0, 6.0, 2.0)
     
     col4, col5 = st.columns(2)
     with col4: revision, social = st.number_input("Revision (h)", 0.0, 4.0, 1.0), st.number_input("Social Media (h)", 0.0, 5.0, 0.8)
@@ -74,7 +74,7 @@ with tab2:
         
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("🎯 Total Questions", int(total_qs))
-        col2.metric("📚 Study Hours", f"{total_study :.1f}h", "Target: 6h")
+        col2.metric("📚 Study Hours", f"{total_study:.1f}h", "Target: 8h")
         col3.metric("📱 Social Media", f"{today['social_media']:.1f}h", "Goal: <0.75h")
         col4.metric("❤️ Health", today['health'])
         
@@ -104,20 +104,26 @@ with tab3:
     st.plotly_chart(fig2, use_container_width=True)
 
 with tab4:
-        st.header("🤖IMPORTANT")
+    st.header("🤖IMPORTANT")
     if len(data[data['name'] == name]) > 0:
-       
+        today = data[data['name'] == name].iloc[-1]
         total_study = today['phy_study'] + today['chem_study'] + today['math_study'] + today['revision']
         
         if total_study < 6 and today['health'] > 6:
-            st.error("⚠️ Self Study < 6h! 💪")
+            st.error("⚠️ Study < 6h! 💪")
             st.info("""
-            **15 lakh students gave JEE Mains in 2025 out of which only top 2 lakh were selected to give JEE advanced.54,378 students qualified for IIT admissions. 
-            This is your chance to change your life and your parents life. Mate, pain of discipline is always better than pain of regret. Just imagine your yourself in
-            your dream institution. Hardwork always beats talent when talent does not work hard. You are not average or bad at studies, you just need to lock in. Let's do it.
-            Lets track your progress and study smart.**
-            **🔬 Scientifically Proven Technique For Revison:**
-            **Blank paper technique**: Take a blank page and and just try to write everything you have studied(active recall)roughly.If you forget,see your material and mark it.
+            **15 lakh students gave JEE Mains in 2025 out of which only top 2 lakh were selected to give JEE advanced.54,378 students qualified for IIT admissions. This is your chance
+            to change your life and your parents life. Mate, pain of discipline is always better than pain of regret. Just imagine your yourself in your dream institution. Hardwork 
+            always beats talent when talent does not work hard. You are not average or bad at studies,you just need to lock in. Let's do it. Lets track your progress 
+            and study smart.
+            ** **🔬 Scientifically Proven Technique For Revison:**
+            **Blank paper technique**: Take a blank page and and just try to write everything you have studied(active recall)roughly.
+            If you forget,see your material and mark it.
+            **🔬 Science Fixes:**
+            1. **Pomodoro**: 25min study + 5min break
+            2. **Morning Sunlight**: 15min = +2h focus  
+            3. **Active Recall**: Flashcards > re-reading
+          
             """)
         elif today['social_media'] > 0.75:
             st.warning("📱 Social Media > 45min!")
@@ -137,7 +143,8 @@ with tab4:
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #666;'>
-    <h3>👨‍💻Tanay Pant</h3>
-    <p>🚀 JEE Tracker Pro | Live Analytics</p>
+    <h3>👨‍💻 Tanay Pant</h3>
+    <p>🚀 JEE Tracker Pro | Live Analytics </p>
 </div>
 """, unsafe_allow_html=True)
+
