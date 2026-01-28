@@ -74,7 +74,7 @@ with tab2:
         
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("🎯 Total Questions", int(total_qs))
-        col2.metric("📚 Study Hours", f"{self_study:.1f}h", "Target: 6h")
+        col2.metric("📚 Study Hours", f"{total_study :.1f}h", "Target: 6h")
         col3.metric("📱 Social Media", f"{today['social_media']:.1f}h", "Goal: <0.75h")
         col4.metric("❤️ Health", today['health'])
         
