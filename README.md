@@ -1,5 +1,5 @@
 # 🚀JEE_ProgressTracker
-**Live dashboard + AI Study Coach for 250+ Lucknow JEE aspirants**  
+**Live dashboard + AI Study Coach for JEE aspirants**  
 **Built by Tanay Pant | ISC Class 11 AI 
 ## 🎯 **What It Does**
 Interactive web app where **Lucknow JEE students** log daily study data → get **instant analytics + AI coaching**.
