@@ -15,7 +15,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown('<h1 class="main-header">🚀 JEE Progress Tracker Pro</h1>', unsafe_allow_html=True)
-st.markdown('<h3 style="text-align: center; color: #4ECDC4;">Live Dashboard + AI Coach | 250+ Lucknow JEE Students</h3>', unsafe_allow_html=True)
+st.markdown('<h3 style="text-align: center; color: #4ECDC4;">Live Dashboard + AI Coach </h3>', unsafe_allow_html=True)
 
 # Initialize data
 if 'data' not in st.session_state:
