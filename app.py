@@ -104,7 +104,7 @@ with tab3:
     st.plotly_chart(fig2, use_container_width=True)
 
 with tab4:
-        st.header("IMPORTANT")
+        st.header("🤖IMPORTANT")
     if len(data[data['name'] == name]) > 0:
         today = data[data['name'] == name].iloc[-1]
         total_study = today['phy_study'] + today['chem_study'] + today['math_study'] + today['revision']
