@@ -112,10 +112,10 @@ with tab4:
         if total_study < 6 and today['health'] > 6:
             st.error("⚠️ Self Study < 6h! 💪")
             st.info("""
-            15 lakh students gave JEE Mains in 2025 out of which only top 2 lakh were selected to give JEE advanced.54,378 students qualified for IIT admissions. 
+            **15 lakh students gave JEE Mains in 2025 out of which only top 2 lakh were selected to give JEE advanced.54,378 students qualified for IIT admissions. 
             This is your chance to change your life and your parents life. Mate, pain of discipline is always better than pain of regret. Just imagine your yourself in
             your dream institution. Hardwork always beats talent when talent does not work hard. You are not average or bad at studies, you just need to lock in. Let's do it.
-            Lets track your progress and study smart.
+            Lets track your progress and study smart.**
             
             **🔬 Scientifically Proven Technique For Revison:**
             **Blank paper technique**: Take a blank page and and just try to write everything you have studied(active recall)roughly.If you forget,see your material and mark it.
