@@ -38,7 +38,7 @@ data = st.session_state.data
 
 # Sidebar
 st.sidebar.title("👨‍🎓 Your Profile")
-name = st.sidebar.text_input("Name", "Tanay Pant")
+name = st.sidebar.text_input("Name", "")
 
 # 4-TAB SIMPLIFIED DASHBOARD (No errors!)
 tab1, tab2, tab3, tab4 = st.tabs(["📝 Log Today", "📊 Progress", "🔥 Heatmaps", "🤖 AI Coach"])
