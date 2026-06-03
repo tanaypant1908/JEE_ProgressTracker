@@ -1,12 +1,11 @@
 # 🚀JEE_ProgressTracker
-**Live dashboard + AI Study Coach for JEE aspirants**  
-**Built by Tanay Pant | ISC Class 11 AI 
+**Live dashboard + Study Coach for JEE aspirants**  
+**Built by Tanay Pant
 ## 🎯 **What It Does**
-Interactive web app where **Lucknow JEE students** log daily study data → get **instant analytics + AI coaching**.
+Interactive web app where **Lucknow JEE students** log daily study data → get **instant analytics**.
 **Live Features:**
 - 📊 **5-tab dashboard** (Log/Analytics/Heatmaps/Chat/Coach)
 - 🔥 **Advanced heatmaps** (study vs social media correlation)
-- 👥 **Community chat** (247 students talking)
 - 🤖 **AI Study Coach** (Pomodoro, AppBlock recommendations)
 - 📈 **Smart targets** (+10% daily improvement)
 - 📊 **Key Data Science Features**
@@ -16,4 +15,4 @@ Interactive web app where **Lucknow JEE students** log daily study data → get 
 | **Correlation Heatmaps** | Plotly Express | Study vs Output patterns |
 | **Real-time Analytics** | Pandas | 30-day progress tracking |
 | **AI Recommendations** | Conditional Logic | Science-backed study hacks |
-| **Community Leaderboard** |
+
